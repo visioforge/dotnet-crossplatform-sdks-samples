@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net471;net5.0-windows</TargetFrameworks>
@@ -6,7 +6,7 @@
     <ApplicationIcon>visioforge_main_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.2" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.4" />
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
   </ItemGroup>
