@@ -144,7 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.2</Version>
+      <Version>1.1.4</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.x64">
       <Version>1.0.1</Version>
