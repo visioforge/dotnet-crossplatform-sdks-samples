@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="MainDemoUWP.AudioOutputPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MainDemoUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="textBlock" Text="Audio output" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" />
+        <ComboBox x:Name="cbAudioOutputDevice" Margin="10,34,0,0" Width="310"/>
+        <CheckBox x:Name="cbPlayAudio" Content="Play audio" VerticalAlignment="Top" Margin="10,71,0,0" IsChecked="True" />
+        <TextBlock Text="Volume" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,108,0,0" />
+        <Slider x:Name="tbVolume1"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,127,0,0" Width="200" Maximum="100" Value="85" ValueChanged="tbVolume1_ValueChanged"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Console Demo Windows": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\samples\\!video.mp4"
+    }
+  }
+}

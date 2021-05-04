@@ -30,3 +30,24 @@
 *.exe
 *.out
 *.app
+*.pdb
+Media Player SDK/Android/Player Demo Android/obj/
+Media Player SDK/Avalonia/Player Main Demo/bin/
+Media Player SDK/Avalonia/Player Main Demo/obj/
+Media Player SDK/NetCore/Main Demo NetCore/bin/
+Media Player SDK/NetCore/Main Demo NetCore/obj/
+Media Player SDK/Windows/Console Demo Windows/bin/
+Media Player SDK/Windows/Console Demo Windows/obj/
+Media Player SDK/Windows/Main Demo UWP/obj/
+Media Player SDK/Windows/Main Demo WinForms/bin/
+Media Player SDK/Windows/Main Demo WinForms/obj/
+Media Player SDK/Windows/Main Demo WPF/bin/
+Media Player SDK/Windows/Main Demo WPF/obj/
+Media Player SDK/Windows/Mini Demo WPF/bin/
+Media Player SDK/Windows/Mini Demo WPF/obj/
+Media Player SDK/XamarinForms/MiniDemo/MiniDemo.Android/obj/
+Media Player SDK/XamarinForms/MiniDemo/MiniDemo.UWP/obj/
+Media Player SDK/XamarinForms/MiniDemo/MiniDemo/bin/
+Media Player SDK/XamarinForms/MiniDemo/MiniDemo/obj/
+Media Player SDK/Windows/Mini Demo UWP/obj/
+Media Player SDK/.vs/

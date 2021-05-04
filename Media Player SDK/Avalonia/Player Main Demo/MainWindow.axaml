@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonia="clr-namespace:VisioForge.CrossPlatform.Controls.Avalonia;assembly=VisioForge.CrossPlatform.Controls.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Player_Main_Demo.MainWindow"
+        Title="Crossplatform Media Player SDK .Net">
+  <Grid RowDefinitions="Auto,Auto,*">
+    <Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto" RowDefinitions="Auto,*" Grid.Row="0" Margin="10,10,10,0">
+      <Label Content="File name" Height="28" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" />
+      <TextBox Height="23" Grid.Row="0" Grid.Column="1" Name="edFilenameOrURL" HorizontalAlignment="Stretch"
+               Text="c:\Samples\!video.mp4" Margin="5,0,5,0"  />
+      <Button Content="..." Height="23" Grid.Row="0" Grid.Column="2" x:Name="btSelectFile" Width="23"
+              Click="btSelectFile_Click" Margin="5,0,5,0"  />
+    </Grid>
+
+    <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto" Grid.Row="1" Margin="10,0,10,0">
+      <Button x:Name="btPlay" Grid.Row="0" Grid.Column="0" Content="Play" Click="btPlay_Click"
+              Margin="5,0,5,0"  />
+      <Button x:Name="btPause" Grid.Row="0" Grid.Column="1" Content="Pause" Click="btPause_Click"
+              Margin="5,0,5,0"  />
+      <Button x:Name="btResume" Grid.Row="0" Grid.Column="2" Content="Resume" Click="btResume_Click"
+              Margin="5,0,5,0"  />
+      <Button x:Name="btStop" Grid.Row="0" Grid.Column="3" Content="Stop" Click="btStop_Click"
+              Margin="5,0,5,0"  />
+      <Slider x:Name="slSeeking" Grid.Row="0" Grid.Column="4" Margin="5,0,5,0" Tapped="SlSeeking_OnTapped"></Slider>
+      <Label x:Name="lbTimestamp" Grid.Row="0" Grid.Column="5" Margin="5,0,5,0"
+             VerticalContentAlignment="Center">00:00:00 / 00:00:00</Label>
+    </Grid>
+
+    <Grid Grid.Row="2" x:Name="gridVideoView" Background="Black" VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch" Margin="5,0,5,10">
+      <avalonia:VideoView Name="videoView" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1" Height="1" />
+    </Grid>
+  </Grid>
+</Window>

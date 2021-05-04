@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.2" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.2" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.2" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls.Avalonia" Version="1.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX'))" Include="VisioForge.CrossPlatform.Redist.Mac" Version="1.0.0" />
+    <PackageReference Condition="$([MSBuild]::IsOsPlatform('Windows'))" Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
+    <PackageReference Condition="$([MSBuild]::IsOsPlatform('Windows'))" Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
+  </ItemGroup>
+</Project>

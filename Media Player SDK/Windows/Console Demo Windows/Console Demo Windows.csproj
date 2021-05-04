@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net471;net5.0-windows</TargetFrameworks>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.2" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Commands="" Reactor_Configuration="ALL" Reactor_Deploy="0" Reactor_Enabled="0" Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" Reactor_Project="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

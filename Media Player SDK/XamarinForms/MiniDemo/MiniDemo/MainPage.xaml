@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:VisioForge.CrossPlatform.Controls.XamarinForms.Shared;assembly=VisioForge.CrossPlatform.Controls.XamarinForms"
+             x:Class="MediaPlayer.MiniDemo.XF.MainPage" Appearing="MainPage_OnAppearing">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="0" Margin="5,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Clicked="btPlay_OnClicked" Text="Play" Grid.Column="0" HorizontalOptions="FillAndExpand" />
+            <Button Clicked="btPaused_OnClicked" Text="Pause" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+            <Button Clicked="btResume_OnClicked" Text="Resume" Grid.Column="2" HorizontalOptions="FillAndExpand"/>
+            <Button Clicked="btStop_OnClicked" Text="Stop" Grid.Column="3" HorizontalOptions="FillAndExpand"/>
+        </Grid>
+
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="1" Margin="5,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="edFilename" Placeholder="Filename or URL" Grid.Column="0" HorizontalOptions="FillAndExpand" />
+            <Button Clicked="btSelectFile_OnClicked" Grid.Column="1" Text="..." HorizontalOptions="FillAndExpand"/>
+        </Grid>
+
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="2" Margin="5,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <Slider Grid.Column="0" 
+                    ValueChanged="slPosition_OnValueChanged"
+                    x:Name="slPosition" 
+                    VerticalOptions="Center"
+                     DragCompleted="SlPosition_OnDragCompleted"
+                    DragStarted="SlPosition_OnDragStarted"/>
+            <Label x:Name="lbTimestamp" Grid.Column="1" VerticalTextAlignment="Center" />
+        </Grid>
+        
+        <shared:VideoView x:Name="videoView" 
+                          HorizontalOptions="Fill" 
+                          VerticalOptions="Fill" 
+                          WidthRequest="500" 
+                          HeightRequest="500"
+                          BackgroundColor="Black"
+                          Grid.Row="3"
+                          Margin="5,0,5,5"
+                          />
+    </Grid>
+
+</ContentPage>
