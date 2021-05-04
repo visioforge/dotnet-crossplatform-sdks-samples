@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.cbTelemetry = new System.Windows.Forms.CheckBox();
@@ -1544,6 +1545,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tabControl3);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Media Player SDK .Net Crossplatform - Main Demo";
             this.Load += new System.EventHandler(this.Form1_Load);
