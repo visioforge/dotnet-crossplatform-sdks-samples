@@ -51,12 +51,6 @@
             this.btSelectFile = new System.Windows.Forms.Button();
             this.edFilenameOrURL = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.tabPage28 = new System.Windows.Forms.TabPage();
-            this.tbVUMeterBoost = new System.Windows.Forms.TrackBar();
-            this.label382 = new System.Windows.Forms.Label();
-            this.label381 = new System.Windows.Forms.Label();
-            this.tbVUMeterAmplification = new System.Windows.Forms.TrackBar();
-            this.cbVUMeterPro = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl17 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -161,9 +155,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeline)).BeginInit();
-            this.tabPage28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVUMeterBoost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVUMeterAmplification)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabControl17.SuspendLayout();
             this.tabPage7.SuspendLayout();
@@ -426,68 +417,6 @@
             this.label14.Size = new System.Drawing.Size(89, 13);
             this.label14.TabIndex = 21;
             this.label14.Text = "File name or URL";
-            // 
-            // tabPage28
-            // 
-            this.tabPage28.Controls.Add(this.tbVUMeterBoost);
-            this.tabPage28.Controls.Add(this.label382);
-            this.tabPage28.Controls.Add(this.label381);
-            this.tabPage28.Controls.Add(this.tbVUMeterAmplification);
-            this.tabPage28.Controls.Add(this.cbVUMeterPro);
-            this.tabPage28.Location = new System.Drawing.Point(4, 22);
-            this.tabPage28.Name = "tabPage28";
-            this.tabPage28.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage28.Size = new System.Drawing.Size(301, 492);
-            this.tabPage28.TabIndex = 11;
-            this.tabPage28.Text = "VU meter";
-            this.tabPage28.UseVisualStyleBackColor = true;
-            // 
-            // tbVUMeterBoost
-            // 
-            this.tbVUMeterBoost.Location = new System.Drawing.Point(124, 139);
-            this.tbVUMeterBoost.Maximum = 30;
-            this.tbVUMeterBoost.Minimum = 1;
-            this.tbVUMeterBoost.Name = "tbVUMeterBoost";
-            this.tbVUMeterBoost.Size = new System.Drawing.Size(104, 45);
-            this.tbVUMeterBoost.TabIndex = 122;
-            this.tbVUMeterBoost.Value = 10;
-            // 
-            // label382
-            // 
-            this.label382.AutoSize = true;
-            this.label382.Location = new System.Drawing.Point(121, 123);
-            this.label382.Name = "label382";
-            this.label382.Size = new System.Drawing.Size(68, 13);
-            this.label382.TabIndex = 121;
-            this.label382.Text = "Meters boost";
-            // 
-            // label381
-            // 
-            this.label381.AutoSize = true;
-            this.label381.Location = new System.Drawing.Point(121, 58);
-            this.label381.Name = "label381";
-            this.label381.Size = new System.Drawing.Size(120, 13);
-            this.label381.TabIndex = 120;
-            this.label381.Text = "Volume amplification (%)";
-            // 
-            // tbVUMeterAmplification
-            // 
-            this.tbVUMeterAmplification.Location = new System.Drawing.Point(124, 74);
-            this.tbVUMeterAmplification.Maximum = 100;
-            this.tbVUMeterAmplification.Name = "tbVUMeterAmplification";
-            this.tbVUMeterAmplification.Size = new System.Drawing.Size(105, 45);
-            this.tbVUMeterAmplification.TabIndex = 119;
-            this.tbVUMeterAmplification.Value = 100;
-            // 
-            // cbVUMeterPro
-            // 
-            this.cbVUMeterPro.AutoSize = true;
-            this.cbVUMeterPro.Location = new System.Drawing.Point(22, 24);
-            this.cbVUMeterPro.Name = "cbVUMeterPro";
-            this.cbVUMeterPro.Size = new System.Drawing.Size(125, 17);
-            this.cbVUMeterPro.TabIndex = 115;
-            this.cbVUMeterPro.Text = "Enable VU meter Pro";
-            this.cbVUMeterPro.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -1451,7 +1380,6 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage28);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1556,10 +1484,6 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTimeline)).EndInit();
-            this.tabPage28.ResumeLayout(false);
-            this.tabPage28.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVUMeterBoost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVUMeterAmplification)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabControl17.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
@@ -1627,12 +1551,6 @@
         private System.Windows.Forms.Label label14;
         private VisioForge.CrossPlatform.Controls.WinForms.VideoView videoView1;
         private System.Windows.Forms.Button btPreviousFrame;
-        private System.Windows.Forms.TabPage tabPage28;
-        private System.Windows.Forms.TrackBar tbVUMeterBoost;
-        private System.Windows.Forms.Label label382;
-        private System.Windows.Forms.Label label381;
-        private System.Windows.Forms.TrackBar tbVUMeterAmplification;
-        private System.Windows.Forms.CheckBox cbVUMeterPro;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabControl tabControl17;
         private System.Windows.Forms.TabPage tabPage68;

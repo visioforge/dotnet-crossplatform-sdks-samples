@@ -169,20 +169,6 @@
                     </TabControl>
                 </Grid>
             </TabItem>
-            <TabItem Header="VU meter" >
-                <Grid>
-                    <CheckBox x:Name="cbVUMeterProEnabled" Content="Enabled" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-
-                    <!--<VolumeMeterPro:VolumeMeter x:Name="volumeMeter1" HorizontalAlignment="Left" Height="185.022" Margin="50.245,39.098,0,0" VerticalAlignment="Top" Width="22"/>
-                    <VolumeMeterPro:VolumeMeter x:Name="volumeMeter2" HorizontalAlignment="Left" Height="185.022" Margin="77.245,39.098,0,0" VerticalAlignment="Top" Width="22"/>-->
-                    <Label Content="Volume amplification (%)" HorizontalAlignment="Left" Margin="152.83,37.771,0,0" VerticalAlignment="Top"/>
-                    <Slider x:Name="tbVUMeterAmplification" HorizontalAlignment="Left" Margin="161.83,63.731,0,0" VerticalAlignment="Top" Width="133.843" Maximum="100" Value="100"/>
-                    <Label Content="VU meter boost" HorizontalAlignment="Left" Margin="152.83,98.854,0,0" VerticalAlignment="Top"/>
-                    <Slider x:Name="tbVUMeterBoost" HorizontalAlignment="Left" Margin="161.83,124.814,0,0" VerticalAlignment="Top" Width="133.843" Maximum="30" Value="10" Minimum="1"/>
-                    <!--<VolumeMeterPro:WaveformPainter x:Name="waveformPainter" HorizontalAlignment="Left" Height="100" Margin="29.244,247.546,0,0" VerticalAlignment="Top" Width="323.966"/>
-                    <VolumeMeterPro:SpectrumAnalyzer x:Name="spectrumAnalyzer" HorizontalAlignment="Left" Height="100" Margin="29.244,361.666,0,0" VerticalAlignment="Top" Width="323.966"/>-->
-                </Grid>
-            </TabItem>
         </TabControl>
         <TabControl Height="172" HorizontalAlignment="Left" Margin="12,583,0,0" x:Name="tabControl12" VerticalAlignment="Top" Width="377">
             <TabItem Header="Errors" x:Name="tabItem47">
