@@ -3,6 +3,7 @@
 namespace MainDemoUWP
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
 
     using VisioForge.CrossPlatform.Controls;
@@ -14,6 +15,8 @@ namespace MainDemoUWP
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Media;
+
+    using SkiaSharp;
 
     using MediaPlayer = VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer;
 
@@ -151,9 +154,9 @@ namespace MainDemoUWP
         {
             await Dispatcher.RunAsync(
                 Windows.UI.Core.CoreDispatcherPriority.Normal,
-                () =>
+                async () =>
                     {
-                        Player.Stop();
+                        await Player.StopAsync();
                         tbTimeline.Value = 0;
                         lbTime.Text = "00:00:00/" + TimeSpan.FromSeconds(tbTimeline.Maximum).ToString(@"hh\:mm\:ss");
                     });
@@ -180,7 +183,7 @@ namespace MainDemoUWP
                     });
         }
 
-        private void btStart_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btStart_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             Player.Debug_Mode = cbDebug.IsChecked == true;
 
@@ -196,22 +199,22 @@ namespace MainDemoUWP
             //ApplyVideoAdjustments();
             //ApplyVideoDeinterlace();
 
-            Player.Play(new Uri(edFilenameOrURL.Text));
+            await Player.PlayAsync(new Uri(edFilenameOrURL.Text));
         }
 
-        private void btResume_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btResume_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Resume();
+            await Player.ResumeAsync();
         }
 
-        private void btPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Pause();
+            await Player.PauseAsync();
         }
 
-        private void btStop_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btStop_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Stop();
+            await Player.StopAsync();
         }
 
         private void tbTimeline_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
@@ -267,11 +270,29 @@ namespace MainDemoUWP
             Player.Video_Stream = cbVideoStream.SelectedIndex;
         }
 
-        private void btSaveScreenshot_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btSaveScreenshot_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.TakeSnapshot(
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), "frame.png"),
-                SnapshotFormat.JPEG);
+            var savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            savePicker.FileTypeChoices.Add("JPEG Image", new List<string>() { ".jpg" });
+            savePicker.SuggestedFileName = "frame.jpg";
+
+            var file = await savePicker.PickSaveFileAsync();
+            if (file != null)
+            {
+                var image = await Player.TakeSnapshotAsync();
+
+                var data = image.Encode(SKEncodedImageFormat.Jpeg, 85);
+                   
+                using (var ms = new MemoryStream())
+                {
+                    data.SaveTo(ms);
+
+                    await FileIO.WriteBytesAsync(file, ms.GetBuffer());
+                }
+
+                data.Dispose();
+            }
         }
 
         //#region 360 degree

@@ -91,9 +91,9 @@ namespace MiniDemoUWP
         {
             await Dispatcher.RunAsync(
                 Windows.UI.Core.CoreDispatcherPriority.Normal,
-                () =>
+                async () =>
                 {
-                    Player.Stop();
+                    await Player.StopAsync();
                     tbTimeline.Value = 0;
                     lbTime.Text = "00:00:00/" + TimeSpan.FromSeconds(tbTimeline.Maximum).ToString(@"hh\:mm\:ss");
                 });
@@ -120,27 +120,27 @@ namespace MiniDemoUWP
                 });
         }
         
-        private void btStart_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btStart_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             edLog.Text = string.Empty;
             Player.Debug_Mode = cbDebug.IsChecked == true;
 
-            Player.Play(new Uri(edFilenameOrURL.Text));
+            await Player.PlayAsync(new Uri(edFilenameOrURL.Text));
         }
 
-        private void btResume_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btResume_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Resume();
+            await Player.ResumeAsync();
         }
 
-        private void btPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Pause();
+            await Player.PauseAsync();
         }
 
-        private void btStop_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void btStop_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player.Stop();
+            await Player.StopAsync();
         }
 
         private async void btSelectFile_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
