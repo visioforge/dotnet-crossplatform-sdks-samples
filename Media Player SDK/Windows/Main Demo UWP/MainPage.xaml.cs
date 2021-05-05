@@ -191,7 +191,7 @@ namespace MainDemoUWP
 
             if (AudioOutputPage.AudioOutputDevice.SelectedIndex != -1)
             {
-                Player.Audio_OutputDevice = AudioOutputPage.AudioOutputDevice.Text;
+                Player.Audio_OutputDevice = AudioOutputPage.AudioOutputDevice.Items[AudioOutputPage.AudioOutputDevice.SelectedIndex].ToString();
             }
 
             Player.Mute = !AudioOutputPage.PlayAudio.IsChecked == true;

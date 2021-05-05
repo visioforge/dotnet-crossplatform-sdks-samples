@@ -8,7 +8,7 @@
     <ApplicationIcon>visioforge_main_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.5" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.6" />
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Mac" Version="1.0.0" />
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
