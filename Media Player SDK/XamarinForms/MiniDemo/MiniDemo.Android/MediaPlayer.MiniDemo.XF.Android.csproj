@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.4</Version>
+      <Version>1.1.5</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Android">
       <Version>1.0.4</Version>

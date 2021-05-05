@@ -165,7 +165,7 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Controls">
-      <Version>1.1.4</Version>
+      <Version>1.1.5</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.ARM">
       <Version>1.0.1</Version>
