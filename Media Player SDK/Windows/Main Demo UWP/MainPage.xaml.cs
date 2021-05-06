@@ -25,7 +25,7 @@ namespace MainDemoUWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private VisioForge.CrossPlatform.Controls.UWP.VideoView videoView = new VisioForge.CrossPlatform.Controls.UWP.VideoView();
+        private VisioForge.CrossPlatform.Core.Controls.UWP.VideoView videoView = new VisioForge.CrossPlatform.Core.Controls.UWP.VideoView();
 
         public MediaPlayer Player { get; private set; }
 

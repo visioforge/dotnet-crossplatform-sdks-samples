@@ -10,7 +10,7 @@ using VisioForge.CrossPlatform.Controls.Types.VideoProcessing;
 using VisioForge.CrossPlatform.Core.Shared;
 using Xamarin.Essentials;
 using MediaPlayer = VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer;
-using VideoView = VisioForge.CrossPlatform.Controls.Android.VideoView;
+using VideoView = VisioForge.CrossPlatform.Core.Controls.Android.VideoView;
 using Resource = PlayerDemoAndroid.Resource;
 
 namespace PlayerDemoAndroid
