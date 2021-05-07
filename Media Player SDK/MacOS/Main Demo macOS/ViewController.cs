@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using AppKit;
 using Foundation;
-using VisioForge.CrossPlatform.Controls.Mac;
+using VisioForge.CrossPlatform.Core.Controls.Mac;
 using VisioForge.CrossPlatform.Core.Shared;
 using Xamarin.Essentials;
 

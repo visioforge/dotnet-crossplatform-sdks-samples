@@ -1,6 +1,6 @@
 ﻿using System;
 using UIKit;
-using VisioForge.CrossPlatform.Controls.iOS;
+using VisioForge.CrossPlatform.Core.Controls.iOS;
 using Plugin.FilePicker.Abstractions;
 using Plugin.FilePicker;
 
@@ -93,27 +93,27 @@ namespace MiniDemoiOS
             }
         }
 
-        private void btPause_TouchUpInside(object sender, EventArgs e)
+        private async void btPause_TouchUpInside(object sender, EventArgs e)
         {
-            _mediaPlayer.Pause();
+            await _mediaPlayer.PauseAsync();
         }
 
-        private void btStop_TouchUpInside(object sender, EventArgs e)
+        private async void btStop_TouchUpInside(object sender, EventArgs e)
         {
-            _mediaPlayer.Stop();
+            await _mediaPlayer.StopAsync();
 
             _isPaused = false;
         }
 
-        private void btPlay_TouchUpInside(object sender, EventArgs e)
+        private async void btPlay_TouchUpInside(object sender, EventArgs e)
         {       
             if (_isPaused)
             {
-                _mediaPlayer.Resume();
+                await _mediaPlayer.ResumeAsync();
             }
             else
             {
-                _mediaPlayer.Play(new Uri(edURL.Text));
+                await _mediaPlayer.PlayAsync(new Uri(edURL.Text));
             }
         }
 

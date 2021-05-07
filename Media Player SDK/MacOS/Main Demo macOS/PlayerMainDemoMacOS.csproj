@@ -57,6 +57,16 @@
     </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="VisioForge.CrossPlatform.Core">
+      <HintPath>..\..\packages\VisioForge.CrossPlatform.Core.1.1.9\lib\xamarinmac20\VisioForge.CrossPlatform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="VisioForge.CrossPlatform.Controls">
+      <HintPath>..\..\packages\VisioForge.CrossPlatform.Controls.1.1.9\lib\xamarinmac20\VisioForge.CrossPlatform.Controls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -90,16 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\VisioForge.CrossPlatform.Core\VisioForge.CrossPlatform.Core.csproj">
-      <Project>{D1C3B7C4-713B-46B2-B33A-E9298C819921}</Project>
-      <Name>VisioForge.CrossPlatform.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\VisioForge.CrossPlatform.Controls\VisioForge.CrossPlatform.Controls.csproj">
-      <Project>{3156D5A3-8940-4DFC-8A88-582517B3B0AC}</Project>
-      <Name>VisioForge.CrossPlatform.Controls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <Import Project="..\..\..\..\packages\SkiaSharp.2.80.2\build\xamarinmac2.0\SkiaSharp.targets" Condition="Exists('..\..\..\..\packages\SkiaSharp.2.80.2\build\xamarinmac2.0\SkiaSharp.targets')" />
