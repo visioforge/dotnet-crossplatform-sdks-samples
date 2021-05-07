@@ -4,7 +4,6 @@ using AppKit;
 using Foundation;
 using VisioForge.CrossPlatform.Core.Controls.Mac;
 using VisioForge.CrossPlatform.Core.Shared;
-using Xamarin.Essentials;
 
 namespace PlayerMainDemoMacOS
 {
@@ -72,22 +71,22 @@ namespace PlayerMainDemoMacOS
 
         partial void btPause_CLick(Foundation.NSObject sender)
         {
-            _mediaPlayer.Pause();
+            _mediaPlayer.PauseAsync();
         }
 
         partial void btResume_Click(Foundation.NSObject sender)
         {
-            _mediaPlayer.Resume();
+            _mediaPlayer.ResumeAsync();
         }
 
         partial void btStart_CLick(Foundation.NSObject sender)
         {
-            _mediaPlayer.Play(new Uri(edURL.StringValue));
+            _mediaPlayer.PlayAsync(new Uri(edURL.StringValue));
         }
 
         partial void btStop_Click(Foundation.NSObject sender)
         {
-            _mediaPlayer.Stop();
+            _mediaPlayer.StopAsync();
         }
 
         partial void slSlider_Changed(Foundation.NSObject sender)
