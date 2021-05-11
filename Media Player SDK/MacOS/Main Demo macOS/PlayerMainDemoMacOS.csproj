@@ -10,6 +10,7 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <ShouldIncludeNativeSkiaSharp>true</ShouldIncludeNativeSkiaSharp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +96,5 @@
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
-  <Import Project="..\..\..\..\packages\SkiaSharp.2.80.2\build\xamarinmac2.0\SkiaSharp.targets" Condition="Exists('..\..\..\..\packages\SkiaSharp.2.80.2\build\xamarinmac2.0\SkiaSharp.targets')" />
   <Import Project="..\..\..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets" Condition="Exists('..\..\..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets')" />
 </Project>
