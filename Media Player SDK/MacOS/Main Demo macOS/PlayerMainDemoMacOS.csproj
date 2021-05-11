@@ -111,5 +111,5 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
-  <Import Project="..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets" />
+  <Import Project="..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets" Condition="Exists('..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets')" />
 </Project>
