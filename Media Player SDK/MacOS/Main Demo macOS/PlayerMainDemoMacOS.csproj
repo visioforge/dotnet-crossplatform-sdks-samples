@@ -106,7 +106,7 @@
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.6.1</Version>
     </PackageReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Mac.">
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Mac">
       <Version>1.0.0</Version>
     </PackageReference>
   </ItemGroup>
