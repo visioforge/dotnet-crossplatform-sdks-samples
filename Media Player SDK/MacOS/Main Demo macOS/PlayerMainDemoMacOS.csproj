@@ -13,6 +13,7 @@
     <ShouldIncludeNativeSkiaSharp>true</ShouldIncludeNativeSkiaSharp>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <RestorePackagesPath>../../packages</RestorePackagesPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,5 +112,11 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
-  <Import Project="..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets" Condition="Exists('..\..\packages\VisioForge.CrossPlatform.Redist.Mac.1.0.0\build\VisioForge.CrossPlatform.Redist.Mac.targets')" />
+
+  <Target Name="CopyLibvlcDylib" AfterTargets="Build"
+        Inputs="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.0/build/osx-x64/libvlc.dylib"
+        Outputs="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib">
+            <Message Text="Copying libvlc.dylib to appbundle..." />
+            <Copy SourceFiles="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.0/build/osx-x64/libvlc.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib" />
+  </Target>
 </Project>
