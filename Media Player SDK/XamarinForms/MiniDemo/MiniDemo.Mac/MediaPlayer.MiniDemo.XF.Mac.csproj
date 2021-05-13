@@ -94,11 +94,11 @@
       <Project>{B0BF55FC-6B61-4007-B3A3-FA3D556C363A}</Project>
       <Name>MediaPlayer.MiniDemo.XF</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2012</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Mac">
       <Version>1.0.0</Version>
     </PackageReference>
@@ -107,6 +107,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+   
   <Target Name="CopyLibvlcDylib" AfterTargets="Build" Inputs="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.0/build/osx-x64/libvlc.dylib" Outputs="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib">
     <Message Text="Copying libvlc.dylib to appbundle..." />
     <Copy SourceFiles="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.0/build/osx-x64/libvlc.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib" />
