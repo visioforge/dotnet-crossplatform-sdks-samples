@@ -93,27 +93,27 @@ namespace MiniDemoiOS
             }
         }
 
-        private async void btPause_TouchUpInside(object sender, EventArgs e)
+        private void btPause_TouchUpInside(object sender, EventArgs e)
         {
-            await _mediaPlayer.PauseAsync();
+            _mediaPlayer.PauseAsync();
         }
 
-        private async void btStop_TouchUpInside(object sender, EventArgs e)
+        private void btStop_TouchUpInside(object sender, EventArgs e)
         {
-            await _mediaPlayer.StopAsync();
+            _mediaPlayer.StopAsync();
 
             _isPaused = false;
         }
 
-        private async void btPlay_TouchUpInside(object sender, EventArgs e)
+        private void btPlay_TouchUpInside(object sender, EventArgs e)
         {       
             if (_isPaused)
             {
-                await _mediaPlayer.ResumeAsync();
+                _mediaPlayer.ResumeAsync();
             }
             else
             {
-                await _mediaPlayer.PlayAsync(new Uri(edURL.Text));
+                _mediaPlayer.PlayAsync(new Uri(edURL.Text));
             }
         }
 
