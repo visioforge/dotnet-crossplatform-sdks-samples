@@ -20,23 +20,11 @@ namespace MediaPlayer.MiniDemo.XF
 
         private bool IsVideoViewInitialized;
 
+        private VideoView _videoView;
+
         public MainPage()
         {
-            InitializeComponent();
-
-            CreatePlayer();
-        }
-
-        private void CreatePlayer()
-        {
-            if (_mediaPlayer != null)
-            {
-                DestroyPlayer();
-            }
-
-            _mediaPlayer = new VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer(null);
-            _mediaPlayer.OnMediaLengthChanged += MediaPlayerOnOnMediaLengthChanged;
-            _mediaPlayer.OnPositionChange += MediaPlayerOnOnPositionChange;
+            InitializeComponent();       
         }
 
         private void MediaPlayerOnOnPositionChange(object sender, PositionChangedEventArgs e)
@@ -56,35 +44,10 @@ namespace MediaPlayer.MiniDemo.XF
             });
         }
 
-        private async void DestroyPlayer()
-        {
-            if (_mediaPlayer == null)
-            {
-                return;
-            }
-
-            await _mediaPlayer.StopAsync();
-            _mediaPlayer.OnMediaLengthChanged -= MediaPlayerOnOnMediaLengthChanged;
-            _mediaPlayer.OnPositionChange -= MediaPlayerOnOnPositionChange;
-            _mediaPlayer.Dispose();
-            _mediaPlayer = null;
-        }
-
         private async void btPlay_OnClicked(object sender, EventArgs e)
         {
             if (IsVideoViewInitialized)
             {
-                DestroyPlayer();
-                CreatePlayer();
-
-                foreach (var view in MainGrid.Children)
-                {
-                    if (view.GetType() == typeof(VideoView))
-                    {
-                        videoView = (VideoView)view;
-                    }
-                }
-
                 _mediaPlayer.UpdateView(videoView);
                 await _mediaPlayer.PlayAsync(new Uri(_filename));
             }
@@ -118,8 +81,7 @@ namespace MediaPlayer.MiniDemo.XF
 
         private async void btSelectFile_OnClicked(object sender, EventArgs e)
         {
-            DestroyPlayer();
-
+            
             var result = await FilePicker.PickAsync();
             if (result != null)
             {
@@ -130,8 +92,12 @@ namespace MediaPlayer.MiniDemo.XF
 
         private void MainPage_OnAppearing(object sender, EventArgs e)
         {
-            _mediaPlayer.UpdateView(videoView);
             IsVideoViewInitialized = true;
+
+            _videoView = this.FindByName<VideoView>("videoView");
+            _mediaPlayer = new VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer(_videoView);
+            _mediaPlayer.OnMediaLengthChanged += MediaPlayerOnOnMediaLengthChanged;
+            _mediaPlayer.OnPositionChange += MediaPlayerOnOnPositionChange;
 
             edFilename.Text = _filename;
         }
@@ -150,3 +116,4 @@ namespace MediaPlayer.MiniDemo.XF
         }
     }
 }
+

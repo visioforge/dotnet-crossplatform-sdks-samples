@@ -9,8 +9,8 @@
     <PackageReference Include="Avalonia" Version="0.10.2" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.2" />
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.2" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.12" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.Avalonia" Version="1.1.12" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.14" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls.Avalonia" Version="1.1.14" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Condition="$([MSBuild]::IsOsPlatform('OSX'))" Include="VisioForge.CrossPlatform.Redist.Mac" Version="1.0.0" />

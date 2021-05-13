@@ -6,16 +6,26 @@
 
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
             <RowDefinition />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        
+        <shared:VideoView x:Name="videoView" 
+                          HorizontalOptions="Fill" 
+                          VerticalOptions="Fill" 
+                          WidthRequest="500" 
+                          HeightRequest="500"
+                          BackgroundColor="Black"
+                          Grid.Row="0"
+                          Margin="5,15,5,5"
+                          />
 
-        <Grid HorizontalOptions="FillAndExpand" Grid.Row="0" Margin="5,0,5,0">
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="1" Margin="5,0,5,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -29,7 +39,7 @@
             <Button Clicked="btStop_OnClicked" Text="Stop" Grid.Column="3" HorizontalOptions="FillAndExpand"/>
         </Grid>
 
-        <Grid HorizontalOptions="FillAndExpand" Grid.Row="1" Margin="5,0,5,0">
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="2" Margin="5,0,5,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="50"/>
@@ -39,7 +49,7 @@
             <Button Clicked="btSelectFile_OnClicked" Grid.Column="1" Text="..." HorizontalOptions="FillAndExpand"/>
         </Grid>
 
-        <Grid HorizontalOptions="FillAndExpand" Grid.Row="2" Margin="5,0,5,0">
+        <Grid HorizontalOptions="FillAndExpand" Grid.Row="3" Margin="5,0,5,15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="120"/>
@@ -54,15 +64,6 @@
             <Label x:Name="lbTimestamp" Grid.Column="1" VerticalTextAlignment="Center" />
         </Grid>
         
-        <shared:VideoView x:Name="videoView" 
-                          HorizontalOptions="Fill" 
-                          VerticalOptions="Fill" 
-                          WidthRequest="500" 
-                          HeightRequest="500"
-                          BackgroundColor="Black"
-                          Grid.Row="3"
-                          Margin="5,0,5,5"
-                          />
     </Grid>
 
 </ContentPage>
