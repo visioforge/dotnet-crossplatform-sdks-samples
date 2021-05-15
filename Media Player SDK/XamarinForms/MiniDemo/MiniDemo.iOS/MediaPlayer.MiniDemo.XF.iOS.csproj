@@ -138,7 +138,7 @@
       <Name>MediaPlayer.MiniDemo.XF</Name>
     </ProjectReference>
     <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.15</Version>
+      <Version>1.1.16</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

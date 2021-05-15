@@ -88,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.15</Version>
+      <Version>1.1.16</Version>
     </PackageReference>
     <ProjectReference Include="..\MiniDemo\MediaPlayer.MiniDemo.XF.csproj">
       <Project>{B0BF55FC-6B61-4007-B3A3-FA3D556C363A}</Project>

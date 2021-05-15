@@ -150,6 +150,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.videoViewFake = new VisioForge.CrossPlatform.Controls.WinForms.TransparentPanel();
             this.videoView1 = new VisioForge.CrossPlatform.Controls.WinForms.VideoView();
+            this.cbStreamPlayback = new System.Windows.Forms.CheckBox();
             this.tabControl3.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1454,11 +1455,22 @@
             this.videoView1.TabIndex = 30;
             this.videoView1.Text = "videoView1";
             // 
+            // cbStreamPlayback
+            // 
+            this.cbStreamPlayback.AutoSize = true;
+            this.cbStreamPlayback.Location = new System.Drawing.Point(329, 371);
+            this.cbStreamPlayback.Name = "cbStreamPlayback";
+            this.cbStreamPlayback.Size = new System.Drawing.Size(359, 17);
+            this.cbStreamPlayback.TabIndex = 40;
+            this.cbStreamPlayback.Text = "Use Stream class to access the file (can be used for memory playback)";
+            this.cbStreamPlayback.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 688);
+            this.Controls.Add(this.cbStreamPlayback);
             this.Controls.Add(this.videoViewFake);
             this.Controls.Add(this.btSaveScreenshot);
             this.Controls.Add(this.label17);
@@ -1649,6 +1661,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private VisioForge.CrossPlatform.Controls.WinForms.TransparentPanel videoViewFake;
         private System.Windows.Forms.Button btCropUpdate;
+        private System.Windows.Forms.CheckBox cbStreamPlayback;
     }
 }
 
