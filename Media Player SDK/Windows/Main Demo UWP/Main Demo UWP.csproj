@@ -201,16 +201,16 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Controls">
-      <Version>1.1.16</Version>
+      <Version>1.1.17</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.ARM">
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.x64">
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.x86">
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

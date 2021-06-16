@@ -20,10 +20,10 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.16" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.WPF" Version="1.1.16" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.17" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls.WPF" Version="1.1.17" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.1" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

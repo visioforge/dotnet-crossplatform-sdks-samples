@@ -86,12 +86,12 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Controls">
-      <Version>1.1.16</Version>
+      <Version>1.1.17</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.6.1</Version>
     </PackageReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Android" Version="1.0.4" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Android" Version="1.0.5" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />

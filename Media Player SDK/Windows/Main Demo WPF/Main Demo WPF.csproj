@@ -30,9 +30,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.WinForms" Version="1.1.16" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.WPF" Version="1.1.16" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.0" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.0" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls.WinForms" Version="1.1.17" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls.WPF" Version="1.1.17" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.1" />
+    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.1" />
   </ItemGroup>
 </Project>
