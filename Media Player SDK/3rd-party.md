@@ -1,0 +1,1 @@
+SDK contains LGPL v2.1 code used from VLC (https://www.videolan.org/) and libvlcsharp (https://github.com/videolan/libvlcsharp) projects. You can download the original source code on project websites. 
