@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:shared="clr-namespace:VisioForge.CrossPlatform.Controls.XamarinForms.Shared;assembly=VisioForge.CrossPlatform.Controls.XamarinForms"
+             xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
              x:Class="MediaPlayer.MiniDemo.XF.MainPage" Appearing="MainPage_OnAppearing">
 
     <Grid x:Name="MainGrid">

@@ -17,7 +17,7 @@ namespace Main_Demo_WinForms
 
     public partial class Form1 : Form
     {
-        private readonly MediaPlayer _player;
+        private readonly MediaPlayerControl _player;
 
         private readonly MediaInfoReader _infoReader;
 
@@ -27,7 +27,7 @@ namespace Main_Demo_WinForms
         {
             InitializeComponent();
 
-            this._player = new MediaPlayer(videoView1);
+            this._player = new MediaPlayerControl(videoView1);
             this._player.OnPositionChange += Player_OnPositionChange;
             this._player.OnStop += Player_OnStop;
             this._player.OnMediaLoaded += Player_OnMediaLoaded;

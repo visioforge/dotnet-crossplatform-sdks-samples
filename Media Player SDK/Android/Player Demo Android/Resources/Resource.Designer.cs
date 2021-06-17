@@ -25,7 +25,7 @@ namespace PlayerDemoAndroid
 		
 		public static void UpdateIdValues()
 		{
-			global::VisioForge.CrossPlatform.Core.Resource.String.app_name = global::PlayerDemoAndroid.Resource.String.app_name;
+			global::LibVLCSharp.Resource.String.app_name = global::PlayerDemoAndroid.Resource.String.app_name;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::PlayerDemoAndroid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::PlayerDemoAndroid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::PlayerDemoAndroid.Resource.Attribute.fontProviderAuthority;

@@ -148,8 +148,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btSaveScreenshot = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.videoViewFake = new VisioForge.CrossPlatform.Controls.WinForms.TransparentPanel();
-            this.videoView1 = new VisioForge.CrossPlatform.Controls.WinForms.VideoView();
+            this.videoViewFake = new  VisioForge.CrossPlatform.Controls.WinForms.TransparentPanel();
+            this.videoView1 = new LibVLCSharp.WinForms.VideoView();
             this.cbStreamPlayback = new System.Windows.Forms.CheckBox();
             this.tabControl3.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -1561,7 +1561,7 @@
         private System.Windows.Forms.Button btSelectFile;
         private System.Windows.Forms.TextBox edFilenameOrURL;
         private System.Windows.Forms.Label label14;
-        private VisioForge.CrossPlatform.Controls.WinForms.VideoView videoView1;
+        private LibVLCSharp.WinForms.VideoView videoView1;
         private System.Windows.Forms.Button btPreviousFrame;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabControl tabControl17;

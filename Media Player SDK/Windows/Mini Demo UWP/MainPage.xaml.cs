@@ -21,9 +21,9 @@ namespace MiniDemoUWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private readonly VisioForge.CrossPlatform.Core.Controls.UWP.VideoView videoView = new VisioForge.CrossPlatform.Core.Controls.UWP.VideoView();
+        private readonly LibVLCSharp.Platforms.UWP.VideoView videoView = new LibVLCSharp.Platforms.UWP.VideoView();
 
-        public MediaPlayer Player { get; private set; }
+        public MediaPlayerControl Player { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="MainPage"/> class
@@ -40,7 +40,7 @@ namespace MiniDemoUWP
         {
             edFilenameOrURL.Text = "http://help.visioforge.com/video.mp4";
 
-            Player = new MediaPlayer(videoView);
+            Player = new MediaPlayerControl(videoView);
             Player.OnPositionChange += Player_OnPositionChange;
             Player.OnStop += Player_OnStop;
             Player.OnMediaLoaded += Player_OnMediaLoaded;

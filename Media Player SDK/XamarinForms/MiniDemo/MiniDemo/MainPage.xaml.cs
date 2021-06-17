@@ -5,22 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VisioForge.CrossPlatform.Controls.Types;
-using VisioForge.CrossPlatform.Controls.XamarinForms.Shared;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using PositionChangedEventArgs = VisioForge.CrossPlatform.Controls.PositionChangedEventArgs;
 
 namespace MediaPlayer.MiniDemo.XF
 {
+    using LibVLCSharp.Forms.Shared;
+
+    using VisioForge.CrossPlatform.Controls.MediaPlayer;
+
     public partial class MainPage : ContentPage
     {
-        private VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer _mediaPlayer;
+        private MediaPlayerControl _mediaPlayer;
         
         private string _filename = "http://help.visioforge.com/video.mp4";
 
         private bool IsVideoViewInitialized;
 
-        private VideoView _videoView;
+        private LibVLCSharp.Forms.Shared.VideoView _videoView;
 
         public MainPage()
         {
@@ -95,7 +98,7 @@ namespace MediaPlayer.MiniDemo.XF
             IsVideoViewInitialized = true;
 
             _videoView = this.FindByName<VideoView>("videoView");
-            _mediaPlayer = new VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer(_videoView);
+            _mediaPlayer = new MediaPlayerControl(_videoView);
             _mediaPlayer.OnMediaLengthChanged += MediaPlayerOnOnMediaLengthChanged;
             _mediaPlayer.OnPositionChange += MediaPlayerOnOnPositionChange;
 

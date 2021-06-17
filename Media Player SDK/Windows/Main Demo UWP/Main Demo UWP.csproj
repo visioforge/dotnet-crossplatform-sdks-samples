@@ -1,4 +1,4 @@
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -200,18 +200,18 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.1</Version>
     </PackageReference>
+    <PackageReference Include="VideoLAN.LibVLC.UWP">
+      <Version>3.3.1</Version>
+    </PackageReference>
     <PackageReference Include="VisioForge.CrossPlatform.Controls">
-      <Version>1.1.17</Version>
+      <Version>1.1.19</Version>
     </PackageReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.ARM">
-      <Version>1.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.x64">
-      <Version>1.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.UWP.x86">
-      <Version>1.0.2</Version>
-    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\VisioForge.CrossPlatform.Controls\VisioForge.CrossPlatform.Controls.csproj">
+      <Project>{3156d5a3-8940-4dfc-8a88-582517b3b0ac}</Project>
+      <Name>VisioForge.CrossPlatform.Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

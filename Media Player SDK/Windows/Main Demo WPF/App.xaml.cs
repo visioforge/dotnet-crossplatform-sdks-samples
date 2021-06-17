@@ -1,8 +1,9 @@
 ﻿using System.Windows;
-using VisioForge.CrossPlatform.Core.Shared;
 
 namespace MainDemoUWP
 {
+    using LibVLCSharp.Shared;
+
     public partial class App : Application
     {
         public App()

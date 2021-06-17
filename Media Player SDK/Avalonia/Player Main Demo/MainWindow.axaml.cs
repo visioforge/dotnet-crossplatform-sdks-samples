@@ -8,16 +8,20 @@ using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using VisioForge.CrossPlatform.Controls;
-using VisioForge.CrossPlatform.Controls.Avalonia;
-using VisioForge.CrossPlatform.Controls.MediaPlayer;
+
 using VisioForge.CrossPlatform.Controls.Types;
 using VisioForge.CrossPlatform.Controls.Types.VideoProcessing;
 
 namespace Player_Main_Demo
 {
+    using LibVLCSharp.Avalonia;
+    using LibVLCSharp.Shared;
+
+    using VisioForge.CrossPlatform.Controls.MediaPlayer;
+
     public class MainWindow : Window
     {
-        private readonly VideoView videoView;
+        private readonly VideoViewX videoView;
 
         private readonly TextBox edFilenameOrURL;
 
@@ -34,13 +38,13 @@ namespace Player_Main_Demo
             this.AttachDevTools();
 #endif
 
-            videoView = this.FindControl<VideoView>("videoView");
+            videoView = this.FindControl<VideoViewX>("videoView");
             edFilenameOrURL = this.FindControl<TextBox>("edFilenameOrURL");
             gridVideoView = this.FindControl<Grid>("gridVideoView");
             slSeeking = this.FindControl<Slider>("slSeeking");
             lbTimestamp = this.FindControl<Label>("lbTimestamp");
             
-            _mediaPlayer = new MediaPlayer(videoView);
+            _mediaPlayer = new MediaPlayerControl(videoView);
             _mediaPlayer.OnError += MediaPlayer_OnError;
             _mediaPlayer.OnMediaLengthChanged += MediaPlayer_OnMediaLengthChanged;
             _mediaPlayer.OnPositionChange += MediaPlayer_OnPositionChange;
@@ -68,7 +72,7 @@ namespace Player_Main_Demo
             AvaloniaXamlLoader.Load(this);
         }
 
-        private readonly MediaPlayer _mediaPlayer;
+        private readonly MediaPlayerControl _mediaPlayer;
 
         private void MediaPlayer_OnError(object? sender, VisioForge.CrossPlatform.Controls.Types.ErrorEventArgs e)
         {

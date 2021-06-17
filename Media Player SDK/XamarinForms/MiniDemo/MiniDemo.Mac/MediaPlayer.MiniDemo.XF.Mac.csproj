@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
-    <RestorePackagesPath>../../packages</RestorePackagesPath>
+    <RestorePackagesPath>../../../../packages</RestorePackagesPath>
     <NuGetPackageImportStamp></NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -87,18 +87,19 @@
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.17</Version>
-    </PackageReference>
+    <ProjectReference Include="..\..\..\..\..\VisioForge.CrossPlatform.Controls.XamarinForms\VisioForge.CrossPlatform.Controls.XamarinForms.csproj">
+      <Project>{06814458-c8b4-4d50-86e2-904e6a9e3499}</Project>
+      <Name>VisioForge.CrossPlatform.Controls.XamarinForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MiniDemo\MediaPlayer.MiniDemo.XF.csproj">
       <Project>{B0BF55FC-6B61-4007-B3A3-FA3D556C363A}</Project>
       <Name>MediaPlayer.MiniDemo.XF</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2012</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="VisioForge.CrossPlatform.Redist.Mac">
       <Version>1.0.1</Version>
     </PackageReference>
@@ -107,8 +108,8 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
-  <Target Name="CopyLibvlcDylib" AfterTargets="Build" Inputs="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.1/build/osx-x64/libvlc.dylib" Outputs="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib">
+  <Target Name="CopyLibvlcDylib" AfterTargets="Build" Inputs="../../../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.1/build/osx-x64/libvlc.dylib" Outputs="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib">
     <Message Text="Copying libvlc.dylib to appbundle..." />
-    <Copy SourceFiles="../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.1/build/osx-x64/libvlc.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib" />
+    <Copy SourceFiles="../../../../packages/VisioForge.CrossPlatform.Redist.Mac/1.0.1/build/osx-x64/libvlc.dylib" DestinationFiles="$(AppBundleDir)/Contents/MonoBundle/libvlc.dylib" />
   </Target>
 </Project>

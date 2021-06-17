@@ -11,7 +11,7 @@
         android:minHeight="25px"
         android:id="@+id/pnScreen"
         android:layout_above="@id/layoutURL">
-      <VisioForge.CrossPlatform.Controls.Android.VideoView
+      <LibVLCSharp.Platforms.Android.VideoView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:minWidth="25px"

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:wpf="clr-namespace:VisioForge.CrossPlatform.Controls.WPF;assembly=VisioForge.CrossPlatform.Controls.WPF"
+        xmlns:wpf="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
         mc:Ignorable="d"
         Title="Media Player SDK .Net Core - Main Demo" Height="802" Width="834" Loaded="Window_Loaded">
     <!--<Grid>

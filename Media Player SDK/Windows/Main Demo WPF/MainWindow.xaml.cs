@@ -20,7 +20,7 @@ namespace MainDemoWPF
 
     public partial class MainWindow : Window
     {
-        private readonly MediaPlayer player;
+        private readonly MediaPlayerControl player;
 
         private readonly MediaInfoReader infoReader;
 
@@ -30,7 +30,7 @@ namespace MainDemoWPF
         {
             InitializeComponent();
 
-            player = new MediaPlayer(VideoView);
+            player = new MediaPlayerControl(VideoView);
             player.OnPositionChange += Player_OnPositionChange;
             player.OnStop += Player_OnStop;
             player.OnMediaLoaded += Player_OnMediaLoaded;

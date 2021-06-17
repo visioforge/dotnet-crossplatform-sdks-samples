@@ -14,10 +14,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using VisioForge.CrossPlatform.Core.Shared;
 
 namespace MainDemoUWP
 {
+    using LibVLCSharp.Shared;
+
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>

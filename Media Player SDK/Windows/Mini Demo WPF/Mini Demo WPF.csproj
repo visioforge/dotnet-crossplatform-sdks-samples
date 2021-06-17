@@ -8,7 +8,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <AssemblyTitle>Mini Demo WPF</AssemblyTitle>
     <Product>Mini Demo WPF</Product>
-    <Copyright>Copyright ©  2021</Copyright>
+    <Copyright>Copyright © 2021</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>visioforge_main_icon.ico</ApplicationIcon>
@@ -20,10 +20,9 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.17" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.WPF" Version="1.1.17" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.1" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.1" />
+    <PackageReference Include="LibVLCSharp.WPF" Version="3.5.1" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.14" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.19" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

@@ -6,9 +6,8 @@
     <ApplicationIcon>visioforge_main_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.17" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x64" Version="1.0.1" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.Windows.x86" Version="1.0.1" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.14" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.19" />
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -18,20 +18,19 @@ namespace Mini_Demo_WPF
 
     using VisioForge.CrossPlatform.Controls.MediaPlayer;
     using VisioForge.CrossPlatform.Controls.Types;
-    using VisioForge.CrossPlatform.Controls.WPF;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly MediaPlayer player;
+        private readonly MediaPlayerControl player;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            player = new MediaPlayer(VV);
+            player = new MediaPlayerControl(VV);
             player.OnError += Player_OnError;
         }
 

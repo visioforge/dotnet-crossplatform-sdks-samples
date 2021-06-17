@@ -1,13 +1,14 @@
 ﻿using VisioForge.CrossPlatform.Controls;
 using System;
 using System.IO;
-using VisioForge.CrossPlatform.Core.Shared;
-using MediaPlayer = VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer;
-
 
 namespace ConsoleDemoWindows
 {
     using System.Threading.Tasks;
+
+    using LibVLCSharp.Shared;
+
+    using VisioForge.CrossPlatform.Controls.MediaPlayer;
 
     class Program
     {
@@ -28,7 +29,7 @@ namespace ConsoleDemoWindows
 
             Core.Initialize();
             
-            var mp = new MediaPlayer(null);
+            var mp = new MediaPlayerControl(null);
             await mp.PlayAsync(new Uri(filename));
 
             Console.WriteLine("Press any key to exit...");

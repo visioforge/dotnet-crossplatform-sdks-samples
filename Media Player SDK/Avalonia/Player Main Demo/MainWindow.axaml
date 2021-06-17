@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:avalonia="clr-namespace:VisioForge.CrossPlatform.Controls.Avalonia;assembly=VisioForge.CrossPlatform.Controls.Avalonia"
+        xmlns:playerMainDemo="clr-namespace:Player_Main_Demo"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Player_Main_Demo.MainWindow"
         Title="Crossplatform Media Player SDK .Net">
@@ -31,7 +31,7 @@
 
     <Grid Grid.Row="2" x:Name="gridVideoView" Background="Black" VerticalAlignment="Stretch"
           HorizontalAlignment="Stretch" Margin="5,0,5,10">
-      <avalonia:VideoView Name="videoView" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1" Height="1" />
+      <playerMainDemo:VideoViewX Name="videoView" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1" Height="1" />
     </Grid>
   </Grid>
 </Window>

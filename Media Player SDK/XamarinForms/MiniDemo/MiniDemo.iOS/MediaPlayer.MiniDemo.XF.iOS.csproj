@@ -136,10 +136,23 @@
     <ProjectReference Include="..\MiniDemo\MediaPlayer.MiniDemo.XF.csproj">
       <Project>{B0BF55FC-6B61-4007-B3A3-FA3D556C363A}</Project>
       <Name>MediaPlayer.MiniDemo.XF</Name>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
-    <PackageReference Include="VisioForge.CrossPlatform.Controls.XamarinForms">
-      <Version>1.1.17</Version>
-    </PackageReference>
+    <ProjectReference Include="..\..\..\..\..\VisioForge.CrossPlatform.Controls.XamarinForms\VisioForge.CrossPlatform.Controls.XamarinForms.csproj">
+      <Project>{06814458-C8B4-4D50-86E2-904E6A9E3499}</Project>
+      <Name>VisioForge.CrossPlatform.Controls.XamarinForms</Name>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\VisioForge.CrossPlatform.Controls\VisioForge.CrossPlatform.Controls.csproj">
+      <Project>{3156D5A3-8940-4DFC-8A88-582517B3B0AC}</Project>
+      <Name>VisioForge.CrossPlatform.Controls</Name>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\VisioForge.CrossPlatform.Core\VisioForge.CrossPlatform.Core.csproj">
+      <Project>{D1C3B7C4-713B-46B2-B33A-E9298C819921}</Project>
+      <Name>VisioForge.CrossPlatform.Core</Name>
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

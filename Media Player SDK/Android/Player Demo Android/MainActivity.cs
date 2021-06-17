@@ -7,22 +7,24 @@ using System.Globalization;
 using System.Threading;
 using VisioForge.CrossPlatform.Controls;
 using VisioForge.CrossPlatform.Controls.Types.VideoProcessing;
-using VisioForge.CrossPlatform.Core.Shared;
 using Xamarin.Essentials;
-using MediaPlayer = VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer;
-using VideoView = VisioForge.CrossPlatform.Core.Controls.Android.VideoView;
+
 using Resource = PlayerDemoAndroid.Resource;
 
 namespace PlayerDemoAndroid
 {
+    using LibVLCSharp.Shared;
+
+    using VisioForge.CrossPlatform.Controls.MediaPlayer;
+
     [Activity(Label = "PlayerDemoAndroid", MainLauncher = true)]
     public class MainActivity : Activity
     {
         private const string VIDEO_URL = "http://help.visioforge.com/video.mp4"; //"/storage/emulated/0/DCIM/!video.avi"; //"http://help.visioforge.com/video.mp4";
 
-        private VideoView videoView;
+        private LibVLCSharp.Platforms.Android.VideoView videoView;
 
-        private MediaPlayer mediaPlayer;
+        private MediaPlayerControl mediaPlayer;
 
         private Button btOpenFile;
 
@@ -51,7 +53,7 @@ namespace PlayerDemoAndroid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            videoView = FindViewById<VideoView>(Resource.Id.videoView1);
+            videoView = FindViewById<LibVLCSharp.Platforms.Android.VideoView>(Resource.Id.videoView1);
 
             btOpenFile = FindViewById<Button>(Resource.Id.btOpenFile);
             btOpenFile.Click += btOpenFile_Click;
@@ -162,7 +164,7 @@ namespace PlayerDemoAndroid
         {
             isSeeking = false;
 
-            mediaPlayer = new MediaPlayer(videoView)
+            mediaPlayer = new MediaPlayerControl(videoView)
             {
                 //EnableHardwareDecoding = true
             };
@@ -182,14 +184,14 @@ namespace PlayerDemoAndroid
         {
             base.OnResume();
 
-            VisioForge.CrossPlatform.Core.Shared.Core.Initialize();
+            Core.Initialize();
         }
 
         private void MediaPlayer_OnMediaLoaded(object sender, EventArgs e)
         {
             sbTimeline.Max = (int)mediaPlayer.Duration.TotalMilliseconds;
 
-            videoView?.RefreshSize();
+            videoView.TriggerLayoutChangeListener();
         }
 
         private void MediaPlayer_OnPositionChange(object sender, PositionChangedEventArgs e)
@@ -234,7 +236,7 @@ namespace PlayerDemoAndroid
         {
             base.OnPause();
 
-            videoView?.MediaPlayer?.Stop();
+            mediaPlayer.StopAsync();
         }
     }
 }

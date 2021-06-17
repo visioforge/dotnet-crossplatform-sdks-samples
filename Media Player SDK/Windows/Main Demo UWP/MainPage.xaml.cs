@@ -16,18 +16,20 @@ namespace MainDemoUWP
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Media;
 
+    using LibVLCSharp.Platforms.UWP;
+
     using SkiaSharp;
 
-    using MediaPlayer = VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer;
+    using VisioForge.CrossPlatform.Controls.MediaPlayer;
 
     /// <summary>
     /// The main page of the application
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private VisioForge.CrossPlatform.Core.Controls.UWP.VideoView videoView = new VisioForge.CrossPlatform.Core.Controls.UWP.VideoView();
+        private VideoView videoView = new VideoView();
 
-        public MediaPlayer Player { get; private set; }
+        public MediaPlayerControl Player { get; private set; }
 
         public MediaInfoReader InfoReader { get; private set; }
 
@@ -59,7 +61,7 @@ namespace MainDemoUWP
 
         private void Page_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Player = new MediaPlayer(videoView);
+            Player = new MediaPlayerControl(videoView);
             Player.OnPositionChange += Player_OnPositionChange;
             Player.OnStop += Player_OnStop;
             Player.OnMediaLoaded += Player_OnMediaLoaded;
