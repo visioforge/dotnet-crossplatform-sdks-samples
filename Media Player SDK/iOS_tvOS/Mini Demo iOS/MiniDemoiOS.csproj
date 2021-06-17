@@ -73,11 +73,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
-    <PackageReference Include="VisioForge.CrossPlatform.Redist.iOS">
-      <Version>1.0.4</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Plugin.FilePicker">
       <Version>2.1.41</Version>
+    </PackageReference>
+    <PackageReference Include="VisioForge.CrossPlatform.Controls">
+      <Version>1.1.20</Version>
+    </PackageReference>
+    <PackageReference Include="VideoLAN.LibVLC.iOS">
+      <Version>3.3.10</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -143,16 +146,6 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\VisioForge.CrossPlatform.Controls\VisioForge.CrossPlatform.Controls.csproj">
-      <Project>{3156D5A3-8940-4DFC-8A88-582517B3B0AC}</Project>
-      <Name>VisioForge.CrossPlatform.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\VisioForge.CrossPlatform.Core\VisioForge.CrossPlatform.Core.csproj">
-      <Project>{D1C3B7C4-713B-46B2-B33A-E9298C819921}</Project>
-      <Name>VisioForge.CrossPlatform.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

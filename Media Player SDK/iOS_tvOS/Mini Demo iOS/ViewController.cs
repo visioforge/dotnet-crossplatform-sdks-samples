@@ -1,8 +1,9 @@
 ﻿using System;
 using UIKit;
-using VisioForge.CrossPlatform.Core.Controls.iOS;
 using Plugin.FilePicker.Abstractions;
 using Plugin.FilePicker;
+using LibVLCSharp.Platforms.iOS;
+using VisioForge.CrossPlatform.Controls.MediaPlayer;
 
 namespace MiniDemoiOS
 {
@@ -12,7 +13,7 @@ namespace MiniDemoiOS
 
         bool _isPaused;
 
-        VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer _mediaPlayer;
+        MediaPlayerControl _mediaPlayer;
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -30,7 +31,7 @@ namespace MiniDemoiOS
 
             edURL.Text = "https://help.visioforge.com/video.mp4";
 
-            _mediaPlayer = new VisioForge.CrossPlatform.Controls.MediaPlayer.MediaPlayer(_videoView);
+            _mediaPlayer = new MediaPlayerControl(_videoView);
             _mediaPlayer.OnError += _mediaPlayer_OnError;
             _mediaPlayer.OnPause += _mediaPlayer_OnPause;
             _mediaPlayer.OnPlaying += _mediaPlayer_OnPlaying;

@@ -19,6 +19,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Condition="$([MSBuild]::IsOsPlatform('Windows'))" Include="VideoLAN.LibVLC.Windows" Version="3.0.14" />
-    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.19" />
+    <PackageReference Include="VisioForge.CrossPlatform.Controls" Version="1.1.20" />
   </ItemGroup>
 </Project>

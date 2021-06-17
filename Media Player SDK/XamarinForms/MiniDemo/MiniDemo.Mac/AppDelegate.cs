@@ -25,7 +25,7 @@ namespace MediaPlayer.MiniDemo.XF.Mac
 
         public override void DidFinishLaunching(NSNotification notification)
         {
-            VisioForge.CrossPlatform.Controls.XamarinForms.Shared.XamarinFormsVideoRenderer.Init();
+            LibVLCSharp.Forms.Shared.LibVLCSharpFormsRenderer.Init();
             Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
             base.DidFinishLaunching(notification);

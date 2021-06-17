@@ -131,6 +131,9 @@
     <PackageReference Include="VisioForge.CrossPlatform.Redist.iOS">
       <Version>1.0.4</Version>
     </PackageReference>
+    <PackageReference Include="VideoLAN.LibVLC.iOS">
+      <Version>3.3.10</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MiniDemo\MediaPlayer.MiniDemo.XF.csproj">

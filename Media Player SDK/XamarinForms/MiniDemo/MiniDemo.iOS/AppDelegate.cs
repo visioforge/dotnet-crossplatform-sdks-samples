@@ -4,7 +4,6 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
-using VisioForge.CrossPlatform.Controls.XamarinForms.Shared;
 
 namespace MediaPlayer.MiniDemo.XF.iOS
 {
@@ -23,7 +22,7 @@ namespace MediaPlayer.MiniDemo.XF.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            XamarinFormsVideoRenderer.Init();
+            LibVLCSharp.Forms.Shared.LibVLCSharpFormsRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
